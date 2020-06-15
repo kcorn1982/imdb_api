@@ -17,3 +17,7 @@ class ImdbDBConnManager:
         self.cur.close()
 
 
+if __name__ == '__main__':
+    x = ImdbDBConnManager()
+    x.execute_query('SELECT * FROM moviedata')
+    print(x.return_data())
